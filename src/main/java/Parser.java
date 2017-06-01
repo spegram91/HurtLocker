@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class Parser {
 
-    static List<Item> groceries = new ArrayList<>();
+    static List<Item> groceries = new ArrayList<Item>();
 
 
     public static Matcher matcherYielder(String theRegex, String checkThis) {
@@ -57,6 +57,13 @@ public class Parser {
                     groceries.add(new Item((regexMatcher.group(1)), regexMatcher.group(5), regexMatcher.group(3)));
                 }
 
+            }
+        }
+        for(int i = 0; i < groceries.size(); i++){
+            System.out.println("Name : " + groceries.get(i).getName());
+            for(int j = 0; j < groceries.get(i).info.size(); j++){
+                System.out.println("Price : " + groceries.get(i).info.get(j).getPrice());
+                System.out.println("Count : " + groceries.get(i).info.get(j).getCount());
             }
         }
     }
