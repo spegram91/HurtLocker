@@ -1,27 +1,26 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by stephenpegram on 6/1/17.
  */
 public class Item {
 
     private String name;
-    private String price;
     private String expirationDate;
+    private String price;
     private int count;
+    List<Info<String, Integer>> info;
 
 
-    Item(String name, String price,  String expirationDate, int count){
+    Item(String name, String expirationDate, String price){
         this.name = name;
-        this.price = price;
         this.expirationDate = expirationDate;
-        this.count = count;
+        this.info.add(0, new Info(price, 0));
     }
 
     public String getName() {
         return name;
-    }
-
-    public String getPrice() {
-        return price;
     }
 
     public String getExpirationDate() {
@@ -29,12 +28,4 @@ public class Item {
     }
 
 
-    public int getCount() {
-        return count;
-    }
-
-
-    public void increment(){
-        this.count++;
-    }
 }
