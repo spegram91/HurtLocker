@@ -7,9 +7,10 @@ import java.util.regex.Pattern;
 /**
  * Created by stephenpegram on 5/31/17.
  */
+
 public class Parser {
 
-
+//static List<Item> groceries = new ArrayList<>();
 
     public static Matcher matcherYielder(String theRegex, String checkThis){
         Pattern checkRegex = Pattern.compile(theRegex);
@@ -38,19 +39,21 @@ public class Parser {
             return result;
         }
 
-        public static void regexSeparator(Matcher regexMatcher){
-            while(regexMatcher.find()){
-                System.out.println(regexMatcher.group(1) + "---" + regexMatcher.group(3) + "---" + regexMatcher.group(5));
+//        public static void regexSeparator(Matcher regexMatcher){
+//            while(regexMatcher.find()){
+//                //System.out.println(regexMatcher.group(1) + "---" + regexMatcher.group(3) + "---" + regexMatcher.group(5));
+//                for(int i = 0; i < groceries.size(); i++){
+//                    if((regexMatcher.group(1).equals(groceries.get(i).getName()))&&(regexMatcher.group(3).equals(groceries.get(i).getPrice()))){
+//                        groceries.get(i).increment();
+//                    }
+//                    else{
+//                        groceries.add(new Item((regexMatcher.group(1)),(regexMatcher.group(3)), (regexMatcher.group(5)), 0);
+//                    }
+//                }
+
 
 
 
             }
 
-        }
-
-
-
-
-
-    }
 
